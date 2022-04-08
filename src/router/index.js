@@ -5,12 +5,17 @@ import ContactPage from '../views/ContactPage.vue'
 import SignUp from '../views/SignUp.vue'
 import LogIn from '../views/LogIn.vue'
 import LogOut from '../views/LogOut.vue'
+import PostsIndex from '../views/PostsIndex.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/posts',
+    component: PostsIndex
   },
   {
     path: '/blogposts',

@@ -6,6 +6,7 @@ import SignUp from '../views/SignUp.vue'
 import LogIn from '../views/LogIn.vue'
 import LogOut from '../views/LogOut.vue'
 import PostsIndex from '../views/PostsIndex.vue'
+import PostsNew from '../views/PostsNew.vue'
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
   {
     path: '/blogposts',
     component: BlogPosts
+  },
+  {
+    path: '/posts-new',
+    component: PostsNew
   },
   {
     path: '/contact',

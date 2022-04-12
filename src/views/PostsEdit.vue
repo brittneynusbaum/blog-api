@@ -19,7 +19,7 @@ export default {
       console.log('editing post')
       axios.patch(`/posts/${this.$route.params.id}.json`, this.editPostParams).then(response => {
         console.log(response.data);
-        this.$router.push("/posts")
+        this.$router.push(`/posts/${this.$route.params.id}.json`)
       });
     }
   },
@@ -29,9 +29,9 @@ export default {
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <p>Title: <input v-model="this.editPostParams.title"></p>
-    <p>Body: <input v-model="this.editPostParams.body"></p>
-    <p>Image: <input v-model="this.editPostParams.image"></p>
+    <p>Title: <input v-model="editPostParams.title"></p>
+    <p>Body: <input v-model="editPostParams.body"></p>
+    <p>Image: <input v-model="editPostParams.image"></p>
     <p><button v-on:click="editPost()">Edit post</button></p>
   </div>
 </template>

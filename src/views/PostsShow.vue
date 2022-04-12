@@ -36,7 +36,8 @@ export default {
     <p>{{ currentPost.body }}</p>
     <img v-bind:src="currentPost.image" />
     <hr />
-    <button v-on:click="deletePost">Delete post</button>
+    <button v-on:click="editPost()">Edit post</button>
+    <button v-on:click="deletePost()">Delete post</button>
   </div>
 </template>
 

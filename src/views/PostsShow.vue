@@ -14,10 +14,16 @@ export default {
     postShow: function () {
       console.log('showing post');
       console.log(this.$route.params.id);
-      axios.get(`/posts/1`).then(response => {
+      axios.get(`/posts/${this.$route.params.id}`).then(response => {
         console.log(response.data)
         this.currentPost = response.data
       })
+    },
+    deletePost: function () {
+      console.log('deleting post');
+      axios.delete(`/posts/${this.$route.params.id}`).then(response => {
+        console.log(response.data);
+      });
     }
   },
 };
@@ -29,6 +35,8 @@ export default {
     <p>{{ currentPost.title }}</p>
     <p>{{ currentPost.body }}</p>
     <img v-bind:src="currentPost.image" />
+    <hr />
+    <button v-on:click="deletePost">Delete post</button>
   </div>
 </template>
 

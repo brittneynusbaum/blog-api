@@ -8,6 +8,7 @@ import LogOut from '../views/LogOut.vue'
 import PostsIndex from '../views/PostsIndex.vue'
 import PostsNew from '../views/PostsNew.vue'
 import PostsShow from '../views/PostsShow.vue'
+import PostsEdit from '../views/PostsEdit.vue'
 
 const routes = [
   {
@@ -30,6 +31,10 @@ const routes = [
   {
     path: '/posts/:id',
     component: PostsShow
+  },
+  {
+    path: '/posts/:id/edit',
+    component: PostsEdit
   },
   {
     path: '/contact',

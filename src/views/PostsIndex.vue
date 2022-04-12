@@ -31,6 +31,8 @@ export default {
       <br />
       <img v-bind:src="post.image" />
       <hr />
+      <router-link v-bind:to="`/posts/${post.id}`">Post info</router-link>
+
     </div>
   </div>
 </template>
